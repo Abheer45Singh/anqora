@@ -8,10 +8,10 @@ export function Platform() {
           
           <div style={{ flex: '1 1 400px' }}>
             <h4 style={{ color: 'var(--color-primary-green)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.875rem', fontWeight: 600, marginBottom: '1rem' }}>Anqora Platform</h4>
-            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, marginBottom: '1.5rem', lineHeight: 1.1 }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.15, letterSpacing: '-0.5px' }}>
               One platform.<br />Every touchpoint.
             </h2>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '1.125rem', marginBottom: '3rem', lineHeight: 1.6 }}>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>
               Orchestrate customer communication across channels from a single, modern control layer.
             </p>
 
@@ -41,7 +41,7 @@ export function Platform() {
           </div>
 
           <div style={{ flex: '1 1 500px', position: 'relative' }}>
-            <div className="glass-panel" style={{ padding: '2rem', borderRadius: '24px', position: 'relative', zIndex: 2 }}>
+            <div className="glass-panel" style={{ padding: '2rem', borderRadius: '16px', position: 'relative', zIndex: 2 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', borderBottom: '1px solid var(--color-border)', paddingBottom: '1rem' }}>
                 <span style={{ fontWeight: 600, fontSize: '1.125rem' }}>Overview</span>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.875rem', color: 'var(--color-primary-green)' }}>

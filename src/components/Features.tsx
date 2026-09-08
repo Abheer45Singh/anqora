@@ -6,15 +6,15 @@ export function Features() {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h4 style={{ color: 'var(--color-primary-blue)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.875rem', fontWeight: 600, marginBottom: '1rem' }}>What We Do</h4>
-          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, marginBottom: '1rem' }}>Communication, without the complexity.</h2>
-          <p style={{ color: 'var(--color-text-muted)', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.5px' }}>Communication, without the complexity.</h2>
+          <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', maxWidth: '600px', margin: '0 auto' }}>
             From the first message to the final conversion, Anqora brings your customer communication into one connected ecosystem.
           </p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           {/* Card 1 */}
-          <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '24px', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer' }}>
+          <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '16px', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer' }}>
             <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: 'rgba(57, 181, 74, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem', color: 'var(--color-primary-green)' }}>
               <MessageCircle size={32} />
             </div>
@@ -28,7 +28,7 @@ export function Features() {
           </div>
 
           {/* Card 2 */}
-          <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '24px', transition: 'transform 0.3s ease, box-shadow 0.3s ease', transform: 'translateY(-1rem)', cursor: 'pointer' }}>
+          <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '16px', transition: 'transform 0.3s ease, box-shadow 0.3s ease', transform: 'translateY(-1rem)', cursor: 'pointer' }}>
             <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: 'rgba(0, 174, 239, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem', color: 'var(--color-primary-blue)' }}>
               <Smartphone size={32} />
             </div>
@@ -42,7 +42,7 @@ export function Features() {
           </div>
 
           {/* Card 3 */}
-          <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '24px', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer' }}>
+          <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '16px', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer' }}>
             <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: 'var(--gradient-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem' }}>
               <Code size={32} style={{ color: 'var(--color-text)' }} />
             </div>

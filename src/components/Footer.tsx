@@ -6,17 +6,17 @@ export function Footer() {
       <div className="container">
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', marginBottom: '6rem' }}>
           <div style={{ flex: '1 1 400px' }}>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, marginBottom: '1.5rem', lineHeight: 1.1 }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.15, letterSpacing: '-0.5px' }}>
               Ready to make every<br />
               <span className="text-gradient">message matter?</span>
             </h2>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '1.125rem', marginBottom: '2rem', maxWidth: '400px', lineHeight: 1.6 }}>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', marginBottom: '2rem', maxWidth: '400px', lineHeight: 1.6 }}>
               We help ambitious businesses turn communication into an advantage — with reliable infrastructure, thoughtful product design and support that stays close to your business.
             </p>
           </div>
           
           <div style={{ flex: '1 1 400px' }}>
-            <form className="glass-panel" style={{ padding: '2.5rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <form className="glass-panel" style={{ padding: '2.5rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 <div style={{ flex: 1 }}>
                   <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Your name</label>
@@ -47,10 +47,8 @@ export function Footer() {
         
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', borderTop: '1px solid var(--color-border)', paddingTop: '3rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '32px', height: '32px', background: 'var(--gradient-primary)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 800, fontSize: '18px' }}>
-              A
-            </div>
-            <span style={{ fontSize: '24px', fontWeight: 800, letterSpacing: '-1px' }}>Anqora<span style={{ color: 'var(--color-primary-blue)' }}>.</span></span>
+            <img src="/favicon.png" alt="Anqora Logo" style={{ width: '48px', height: '48px', mixBlendMode: 'screen' }} />
+            <span style={{ fontSize: '24px', fontWeight: 700, letterSpacing: '-0.5px' }}>Anqora</span>
           </div>
           
           <p style={{ color: 'var(--color-text-muted)', textAlign: 'center' }}>

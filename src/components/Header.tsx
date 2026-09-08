@@ -5,10 +5,8 @@ export function Header() {
     <header className="header glass-panel" style={{ position: 'sticky', top: 0, zIndex: 50, borderBottom: '1px solid var(--color-border)', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: 0 }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ width: '40px', height: '40px', background: 'var(--gradient-primary)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 800, fontSize: '24px', boxShadow: '0 4px 14px rgba(0, 174, 239, 0.3)' }}>
-            A
-          </div>
-          <span style={{ fontSize: '28px', fontWeight: 800, letterSpacing: '-1px' }}>Anqora<span style={{ color: 'var(--color-primary-blue)' }}>.</span></span>
+          <img src="/favicon.png" alt="Anqora Logo" style={{ width: '52px', height: '52px', mixBlendMode: 'screen' }} />
+          <span style={{ fontSize: '28px', fontWeight: 700, letterSpacing: '-0.5px' }}>Anqora</span>
         </div>
         
         <nav style={{ display: 'flex', gap: '32px' }} className="nav-desktop">

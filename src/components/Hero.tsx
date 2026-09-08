@@ -12,20 +12,20 @@ export function Hero() {
           COMMUNICATIONS • AUTOMATION • GROWTH
         </div>
         
-        <h1 className="animate-fade-in delay-100" style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-2px', marginBottom: '1.5rem' }}>
+        <h1 className="animate-fade-in delay-100" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, lineHeight: 1.15, letterSpacing: '-1px', marginBottom: '1.5rem' }}>
           Every conversation.<br />
           <span className="text-gradient">One powerful connection.</span>
         </h1>
         
-        <p className="animate-fade-in delay-200" style={{ fontSize: '1.25rem', color: 'var(--color-text-muted)', marginBottom: '3rem', maxWidth: '700px', margin: '0 auto 3rem auto', lineHeight: 1.6 }}>
+        <p className="animate-fade-in delay-200" style={{ fontSize: '1.125rem', color: 'var(--color-text-muted)', marginBottom: '3rem', maxWidth: '700px', margin: '0 auto 3rem auto', lineHeight: 1.6 }}>
           Build meaningful customer journeys across WhatsApp, SMS and RCS with a communication platform designed for speed, scale and measurable growth.
         </p>
         
         <div className="animate-fade-in delay-300" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-          <a href="#contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-            Start a conversation <ArrowRight size={20} style={{ marginLeft: '8px' }} />
+          <a href="#contact" className="btn btn-primary" style={{ padding: '0.875rem 1.75rem', fontSize: '1rem' }}>
+            Start a conversation <ArrowRight size={18} style={{ marginLeft: '8px' }} />
           </a>
-          <a href="#solutions" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', border: 'none', background: 'rgba(255, 255, 255, 0.05)' }}>
+          <a href="#solutions" className="btn btn-secondary" style={{ padding: '0.875rem 1.75rem', fontSize: '1rem', border: 'none', background: 'rgba(255, 255, 255, 0.05)' }}>
             Explore solutions ↓
           </a>
         </div>
