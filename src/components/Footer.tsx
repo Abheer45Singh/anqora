@@ -47,7 +47,7 @@ export function Footer() {
         
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', borderTop: '1px solid var(--color-border)', paddingTop: '3rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <img src="/favicon.png" alt="Anqora Logo" style={{ width: '48px', height: '48px', mixBlendMode: 'screen' }} />
+            <img src="/favicon.png" alt="Anqora Logo" style={{ width: '48px', height: '48px', mixBlendMode: 'screen', filter: 'contrast(1.2) brightness(0.9)' }} />
             <span style={{ fontSize: '24px', fontWeight: 700, letterSpacing: '-0.5px' }}>Anqora</span>
           </div>
           

@@ -1,11 +1,11 @@
-import { MessageSquare, Menu } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 export function Header() {
   return (
     <header className="header glass-panel" style={{ position: 'sticky', top: 0, zIndex: 50, borderBottom: '1px solid var(--color-border)', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: 0 }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <img src="/favicon.png" alt="Anqora Logo" style={{ width: '52px', height: '52px', mixBlendMode: 'screen' }} />
+          <img src="/favicon.png" alt="Anqora Logo" style={{ width: '52px', height: '52px', mixBlendMode: 'screen', filter: 'contrast(1.2) brightness(0.9)' }} />
           <span style={{ fontSize: '28px', fontWeight: 700, letterSpacing: '-0.5px' }}>Anqora</span>
         </div>
         
