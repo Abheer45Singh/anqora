@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
 :root {
   /* Anqora Brand Colors */
   --color-primary-blue: #00AEEF;
   --color-primary-green: #39B54A;
   
-  --color-bg: #0B1120;
-  --color-bg-card: #151D2E;
+  --color-bg: #070A13;
+  --color-bg-card: #0F172A;
   --color-bg-elevated: #1E293B;
   
   --color-text: #F8FAFC;
   --color-text-muted: #94A3B8;
-  --color-border: #334155;
+  --color-border: #1E293B;
   
   --gradient-primary: linear-gradient(135deg, var(--color-primary-blue) 0%, var(--color-primary-green) 100%);
   --gradient-subtle: linear-gradient(180deg, rgba(0, 174, 239, 0.05) 0%, rgba(57, 181, 74, 0.05) 100%);
   
-  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   font-weight: 400;
   
@@ -57,11 +57,11 @@ body {
 }
 
 .glass-panel {
-  background: rgba(21, 29, 46, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Smooth Scrolling */
@@ -127,3 +127,57 @@ html {
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
+
+/* Code Block Styles */
+.code-block {
+  font-family: 'Fira Code', monospace;
+  background: #0B1120;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.code-keyword { color: #C678DD; }
+.code-string { color: #98C379; }
+.code-function { color: #61AFEF; }
+.code-comment { color: #5C6370; font-style: italic; }
+
+/* Custom UI Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float-delayed {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes messagePop {
+  0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 7s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-message {
+  animation: messagePop 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.msg-delay-1 { animation-delay: 400ms; }
+.msg-delay-2 { animation-delay: 800ms; }
+.msg-delay-3 { animation-delay: 1200ms; }
