@@ -11,7 +11,7 @@ export function Hero() {
         
         {/* Left Column: Text */}
         <div style={{ flex: '1 1 500px', zIndex: 1 }}>
-          <div className="animate-fade-in" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.5rem 1rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--color-border)', borderRadius: '9999px', marginBottom: '2rem', fontSize: '13px', fontWeight: 600, color: 'var(--color-text-muted)', letterSpacing: '0.5px' }}>
+          <div className="animate-fade-in" style={{ display: 'none', alignItems: 'center', gap: '8px', padding: '0.5rem 1rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--color-border)', borderRadius: '9999px', marginBottom: '2rem', fontSize: '13px', fontWeight: 600, color: 'var(--color-text-muted)', letterSpacing: '0.5px' }}>
             <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--color-primary-green)' }}></span>
             API v2.0 IS LIVE
           </div>
