@@ -97,14 +97,14 @@ export function Features() {
 
             {/* Feature 3 */}
             <div className="glass-panel" style={{ padding: '3rem', borderRadius: '16px' }}>
-              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', color: 'var(--color-text)' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 174, 239, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', color: 'var(--color-primary-blue)' }}>
                 <Webhook size={24} />
               </div>
               <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>Event-Driven Webhooks</h3>
               <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem', lineHeight: 1.6 }}>
                 Receive real-time delivery receipts (DLRs), read receipts, and inbound messages directly to your application infrastructure.
               </p>
-              <a href="#" style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <a href="#" style={{ color: 'var(--color-primary-blue)', textDecoration: 'none', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                 Read the guide <ArrowRight size={16} />
               </a>
             </div>
