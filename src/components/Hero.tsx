@@ -1,4 +1,4 @@
-import { ArrowRight, Terminal } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -41,12 +41,12 @@ export function Hero() {
           <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '1.5rem', paddingTop: '2rem' }}>
             
             {/* WhatsApp Bubble */}
-            <div className="glass-panel animate-float msg-delay-1 animate-message" style={{ alignSelf: 'flex-start', padding: '1.25rem', borderRadius: '16px 16px 16px 4px', maxWidth: '85%', background: 'rgba(21, 30, 46, 0.85)', border: '1px solid rgba(57, 181, 74, 0.3)', boxShadow: '0 8px 32px rgba(0,0,0,0.2)' }}>
+            <div className="glass-panel animate-float msg-delay-1 animate-message" style={{ alignSelf: 'flex-start', padding: '1.25rem', borderRadius: '16px 16px 16px 4px', maxWidth: '85%', background: '#FFFFFF', border: '1px solid rgba(57, 181, 74, 0.2)', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
                 <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'var(--color-primary-green)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                 </div>
-                <span style={{ fontSize: '12px', color: 'var(--color-text-muted)', fontWeight: 600 }}>WhatsApp Business</span>
+                <span style={{ fontSize: '12px', color: 'var(--color-text)', fontWeight: 600 }}>WhatsApp Business</span>
                 <span style={{ fontSize: '11px', color: 'var(--color-text-muted)', marginLeft: 'auto' }}>Just now</span>
               </div>
               <p style={{ fontSize: '0.9375rem', lineHeight: 1.5, color: 'var(--color-text)' }}>
@@ -55,12 +55,12 @@ export function Hero() {
             </div>
 
             {/* SMS Bubble */}
-            <div className="glass-panel animate-float-delayed msg-delay-2 animate-message" style={{ alignSelf: 'flex-end', padding: '1.25rem', borderRadius: '16px 16px 4px 16px', maxWidth: '80%', background: 'rgba(21, 30, 46, 0.85)', border: '1px solid rgba(0, 174, 239, 0.3)', boxShadow: '0 8px 32px rgba(0,0,0,0.2)' }}>
+            <div className="glass-panel animate-float-delayed msg-delay-2 animate-message" style={{ alignSelf: 'flex-end', padding: '1.25rem', borderRadius: '16px 16px 4px 16px', maxWidth: '80%', background: '#FFFFFF', border: '1px solid rgba(0, 174, 239, 0.2)', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', flexDirection: 'row-reverse' }}>
                 <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'var(--color-primary-blue)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                 </div>
-                <span style={{ fontSize: '12px', color: 'var(--color-text-muted)', fontWeight: 600 }}>Secure SMS</span>
+                <span style={{ fontSize: '12px', color: 'var(--color-text)', fontWeight: 600 }}>Secure SMS</span>
                 <span style={{ fontSize: '11px', color: 'var(--color-text-muted)', marginRight: 'auto' }}>2m ago</span>
               </div>
               <p style={{ fontSize: '0.9375rem', lineHeight: 1.5, color: 'var(--color-text)' }}>
@@ -69,9 +69,9 @@ export function Hero() {
             </div>
 
             {/* Notification Bubble */}
-            <div className="glass-panel animate-float msg-delay-3 animate-message" style={{ alignSelf: 'flex-start', padding: '1.25rem', borderRadius: '16px', maxWidth: '85%', background: 'rgba(21, 30, 46, 0.85)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 8px 32px rgba(0,0,0,0.2)' }}>
+            <div className="glass-panel animate-float msg-delay-3 animate-message" style={{ alignSelf: 'flex-start', padding: '1.25rem', borderRadius: '16px', maxWidth: '85%', background: '#FFFFFF', border: '1px solid var(--color-border)', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'var(--color-bg-elevated)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'var(--color-bg-elevated)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--color-border)' }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                 </div>
                 <div>
