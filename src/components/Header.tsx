@@ -1,35 +1,71 @@
-import { MessageSquare } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import { Link, usePath } from '../router';
+import { Logo } from './ui';
+
+export const NAV = [
+  { to: '/', label: 'Home' },
+  { to: '/solutions', label: 'Solutions' },
+  { to: '/industries', label: 'Industries' },
+  { to: '/about', label: 'About Us' },
+  { to: '/api', label: 'API' },
+  { to: '/partnerships', label: 'Partnerships' },
+];
 
 export function Header() {
+  const path = usePath();
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => setOpen(false), [path]);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+
+  const solid = scrolled || open;
+
   return (
-    <header className="header" style={{ position: 'sticky', top: 0, zIndex: 50, backgroundColor: '#0F172A', color: '#FFFFFF', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <img src="/favicon.png" alt="Anqora Logo" style={{ width: '52px', height: '52px', mixBlendMode: 'screen', filter: 'contrast(1.2) brightness(0.9)' }} />
-          <span style={{ fontSize: '28px', fontWeight: 700, letterSpacing: '-0.5px', color: '#FFFFFF' }}>Anqora</span>
+    <>
+      <header className={`header ${solid ? 'scrolled' : 'on-dark'}`}>
+        <div className="container header-inner">
+          <Link to="/" aria-label="Anqora home" id="nav-logo"><Logo variant={solid ? 'light' : 'dark'} /></Link>
+          <nav aria-label="Primary">
+            <ul className="nav">
+              {NAV.map((n) => (
+                <li key={n.to}><Link to={n.to} id={`nav-${n.label.toLowerCase().replace(/\s/g, '-')}`}>{n.label}</Link></li>
+              ))}
+            </ul>
+          </nav>
+          <Link to="/contact" className="btn btn-primary btn-sm header-cta" id="nav-cta">
+            Talk to Experts <ArrowRight size={16} />
+          </Link>
+          <button
+            className="menu-btn"
+            id="nav-menu-toggle"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X size={26} /> : <Menu size={26} />}
+          </button>
         </div>
-        
-        <nav style={{ display: 'flex', gap: '32px' }} className="nav-desktop">
-          <a href="#solutions" className="nav-link" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FFFFFF'} onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}>Solutions</a>
-          <a href="#platform" className="nav-link" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FFFFFF'} onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}>Platform</a>
-          <a href="#industries" className="nav-link" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FFFFFF'} onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}>Industries</a>
-          <a href="#about" className="nav-link" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FFFFFF'} onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}>About</a>
-        </nav>
-        
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <a href="#contact" className="btn" style={{ 
-            backgroundColor: 'rgba(255, 255, 255, 0.1)', 
-            color: '#FFFFFF', 
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            textDecoration: 'none',
-            transition: 'all 0.2s'
-          }} 
-          onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'; }} 
-          onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'; }}>
-            Talk to us <MessageSquare size={16} style={{ marginLeft: '8px' }} />
-          </a>
-        </div>
-      </div>
-    </header>
+      </header>
+      <nav id="mobile-nav" className={`mobile-nav ${open ? 'open' : ''}`} aria-label="Mobile" aria-hidden={!open} inert={!open}>
+        {NAV.map((n) => <Link key={n.to} to={n.to} className="m-link">{n.label}</Link>)}
+        <Link to="/contact" className="btn btn-primary">Contact Us <ArrowRight size={18} /></Link>
+      </nav>
+    </>
   );
 }
